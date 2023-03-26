@@ -44,6 +44,7 @@ namespace ICanHazDadJoke_Search.Common
                     LongJokesContent.AppendLine(FormatJoke(joke.Joke, searchTerm));
                     longJokesCount++;
                 }
+
             }
 
             if (shortJokesCount != 0)
