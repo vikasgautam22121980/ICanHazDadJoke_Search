@@ -1,0 +1,26 @@
+﻿<Window x:Class="ICanHazDadJoke_Search.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICanHazDadJoke_Search"
+        mc:Ignorable="d" Loaded="Window_Loaded"
+        Title="I Can Haz Dad Joke - Search" Height="450" Width="800" FontStyle="Italic">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox TabIndex="0" x:Name="searchTextBox" Text="Search term" TextWrapping="Wrap" Padding="15" Margin="15" Width="180" FontStyle="Italic"/>
+                <Button TabIndex="1" x:Name="searchJokesButton" Padding="15" Margin="15" Click="searchJokesButton_Click" FontStyle="Italic">Search Joke</Button>
+                <Button TabIndex="2" x:Name="getRandomJokeButton" Padding="15" Margin="15" Click= "Window_Loaded" FontStyle="Italic">Fetch Random Joke</Button>
+            </StackPanel>
+
+        <Label Grid.Row="1" x:Name="displayRandomJoke" Margin="20" FontStyle="Italic" />        
+        <Label Grid.Row="1" x:Name="displaySearchedJokes" Margin="20" FontStyle="Italic"/>
+    </Grid>
+    </ScrollViewer>
+</Window>
